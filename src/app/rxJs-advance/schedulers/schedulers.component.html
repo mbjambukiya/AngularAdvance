@@ -1,0 +1,129 @@
+<div class="mb-3">
+    <h6 class="mb-3">Schedulers</h6>
+    <p class="mb-0">A Scheduler lets you define in what execution context will an Observable deliver notifications to
+        its Observer.
+        A scheduler controls when a subscription starts and when notifications are delivered.</p>
+    <a href="https://rxjs.dev/guide/scheduler" target="_blank">https://rxjs.dev/guide/scheduler</a>
+</div>
+
+<div class="col-3 mb-3">
+    <div class="card">
+        <div class="card-header">
+            without schedular
+        </div>
+        <div class="card-body">
+            <ul id="elContainer"></ul>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                asyncScheduler & observeOn
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">async scheduler schedules tasks asynchronously, by putting them on the JavaScript
+                        event loop queue. It is best used to delay tasks in time or to schedule tasks repeating in
+                        intervals.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/const/asyncScheduler"
+                        target="_blank">https://rxjs.dev/api/index/const/asyncScheduler</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer2"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                queueScheduler & observeOn
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Put every next task on a queue, instead of executing it immediately.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/const/queueScheduler"
+                        target="_blank">https://rxjs.dev/api/index/const/queueScheduler</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer3"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                asapScheduler & observeOn
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Perform task as fast as it can be performed asynchronously.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/const/asapScheduler"
+                        target="_blank">https://rxjs.dev/api/index/const/asapScheduler</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer4"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                animationFrameScheduler
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Perform task when window.requestAnimationFrame would fire.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/const/animationFrameScheduler"
+                        target="_blank">https://rxjs.dev/api/index/const/animationFrameScheduler</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <div class="bg-secondary" style="height: 25px;" id="animationDiv"></div>
+            </div>
+        </div>
+    </div>
+</div>

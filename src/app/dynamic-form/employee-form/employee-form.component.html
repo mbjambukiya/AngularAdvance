@@ -1,0 +1,113 @@
+<div class="m-3">
+    <h4 class="mb-3">Dynamic Form Array</h4>
+    <h5 class="mb-3">Referrence</h5>
+    <p>
+        <a href="https://www.tektutorialshub.com/angular/nested-formarray-example-add-form-fields-dynamically/"
+            target="_blank">https://www.tektutorialshub.com/angular/nested-formarray-example-add-form-fields-dynamically/</a>
+    </p>
+    <h5>Example</h5>
+    <div class="container w-50 p-3">
+        <h5>Employee Form</h5>
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+                    <div class="form-group">
+                        <label class="form-label">Firstname</label>
+                        <input type="text" class="form-control" formControlName="firstName">
+                        <div class="text-danger mb-3"
+                            *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+                            <span *ngIf="firstName.errors!['required']">
+                                Firstname is required.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Lastname</label>
+                        <input type="text" class="form-control" formControlName="lastName">
+                        <div class="text-danger mb-3" *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+                            <span *ngIf="lastName.errors!['required']">
+                                Lastname is required.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                        <div class="text-danger mb-3" *ngIf="email.invalid && (email.dirty || email.touched)">
+                            <span *ngIf="email.errors!['required']">
+                                Email is required.
+                            </span>
+                            <span *ngIf="email.errors!['email']">
+                                Email is invalid.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mobile</label>
+                        <input type="number" class="form-control" formControlName="mobile">
+                        <div class="text-danger mb-3" *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)">
+                            <span *ngIf="mobile.errors!['required']">
+                                Mobile is required.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div formArrayName="skills" class="my-1">
+                        <label class="form-label">Skills</label>
+                        <button class="btn btn-sm btn-secondary ms-2" type="button" (click)="addSkill()">+</button>
+                        <div class="p-1" formGroupName="{{i}}" *ngFor="let skill of skills.controls;let i=index">
+                            <label class="form-label">Skill - {{i+1}}</label>
+                            <button class="btn btn-sm btn-secondary ms-2" (click)="removeSkill(i)">-</button>
+                            <div class="form-group">
+                                <label class="form-label">Language</label>
+                                <input type="text" class="form-control" formControlName="language">
+                                <div class="text-danger mb-3"
+                                    *ngIf="skill.get('language')!.invalid && (skill.get('language')!.dirty || skill.get('language')!.touched)">
+                                    <span *ngIf="skill.get('language')!.errors!['required']">
+                                        Language is required.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Experience</label>
+                                <input type="number" class="form-control" formControlName="experience">
+                                <div class="text-danger mb-3"
+                                    *ngIf="skill.get('experience')!.invalid && (skill.get('experience')!.dirty || skill.get('experience')!.touched)">
+                                    <span *ngIf="skill.get('experience')!.errors!['required']">
+                                        Experience is required.
+                                    </span>
+                                    <span *ngIf="skill.get('experience')!.errors!['min']">
+                                        Minimum experience should be {{skill.get('experience')!.errors!['min'].min}}
+                                        years.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div formGroupName="address">
+                        <div class="form-group">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" formControlName="city">
+                            <div class="text-danger mb-3" *ngIf="city!.invalid && (city!.dirty || city!.touched)">
+                                <span *ngIf="city!.errors!['required']">
+                                    City is required.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Zip</label>
+                            <input type="number" class="form-control" formControlName="zip">
+                            <div class="text-danger mb-3" *ngIf="zip!.invalid && (zip!.dirty || zip!.touched)">
+                                <span *ngIf="zip!.errors!['required']">
+                                    Zip is required.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-info my-2" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

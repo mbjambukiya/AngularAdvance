@@ -1,0 +1,10 @@
+<form [formGroup]="formName">
+    <div class="form-group mb-3">
+        <label class="form-label">{{field.label}}</label>
+        <select class="form-control" [formControlName]="field.fieldName">
+            <option *ngFor="let option of field.options" [value]="option.value">
+                {{option.label}}
+            </option>
+        </select>
+    </div>
+</form>

@@ -1,0 +1,124 @@
+<div class="mb-3">
+    <h6 class="mb-3">Higher order observables (Flattening operators)</h6>
+    <p class="mb-0">Observables most commonly emit ordinary values like strings and numbers, but surprisingly often, it
+        is necessary to handle Observables of Observables, so-called higher-order Observables</p>
+    <a href="https://rxjs.dev/guide/higher-order-observables"
+        target="_blank">https://rxjs.dev/guide/higher-order-observables</a>
+</div>
+
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                concatMap
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Projects each source value to an Observable which is merged in the output
+                        Observable, in a serialized fashion waiting for each one to complete before merging the next.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/concatMap"
+                        target="_blank">https://rxjs.dev/api/index/function/concatMap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                Videos : Tech,Comedy,News
+                <ul id="elContainer"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                mergeMap
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Projects each source value to an Observable which is merged in the output
+                        Observable.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/mergeMap"
+                        target="_blank">https://rxjs.dev/api/index/function/mergeMap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                Videos : Tech,Comedy,News
+                <ul id="elContainer2"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                switchMap
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Projects each source value to an Observable which is merged in the output
+                        Observable, emitting values only from the most recently projected Observable.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/switchMap"
+                        target="_blank">https://rxjs.dev/api/index/function/switchMap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                Videos : Tech,Comedy,News
+                <ul id="elContainer3"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                exhaustMap
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Projects each source value to an Observable which is merged in the output Observable
+                        only if the previous projected Observable has completed.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/exhaustMap"
+                        target="_blank">https://rxjs.dev/api/index/function/exhaustMap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary btn-sm" #inpBtn>Click</button>
+                <ul id="elContainer4"></ul>
+            </div>
+        </div>
+    </div>
+</div>

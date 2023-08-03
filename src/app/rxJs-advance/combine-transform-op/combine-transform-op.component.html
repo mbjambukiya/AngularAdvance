@@ -1,0 +1,391 @@
+<div class="mb-3">
+    <h6 class="mb-3">Combining observables</h6>
+    <p class="mb-0">These are Observable creation operators that also have join functionality -- emitting values of
+        multiple source Observables.</p>
+    <a href="https://rxjs.dev/guide/operators#join-creation-operators"
+        target="_blank">https://rxjs.dev/guide/operators#join-creation-operators</a>
+</div>
+
+
+
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                combineLatest
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Combines multiple Observables to create an Observable whose values are calculated
+                        from the latest values of each of its input Observables.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/combineLatest"
+                        target="_blank">https://rxjs.dev/api/index/function/combineLatest</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                combineLatestAll
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Flattens an Observable-of-Observables by applying combineLatest when the
+                        Observable-of-Observables completes.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/combineLatestAll"
+                        target="_blank">https://rxjs.dev/api/index/function/combineLatestAll</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer2"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                combineLatestWith
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Create an observable that combines the latest values from all passed observables and
+                        the source into arrays and emits them.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/combineLatestWith"
+                        target="_blank">https://rxjs.dev/api/index/function/combineLatestWith</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <input type="text" class="form-control" #inp1>
+                <input type="text" class="form-control" #inp2>
+                <p>{{addition}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                forkJoin
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Accepts an array of observableInput or a dictionary object of observableInput and
+                        returns an Observable that emits either an array of values in the exact same order as the passed
+                        array, or a dictionary of values in the same shape as the passed dictionary.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/forkJoin"
+                        target="_blank">https://rxjs.dev/api/index/function/forkJoin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer3"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                zip
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Combines multiple Observables to create an Observable whose values are calculated
+                        from the values, in order, of each of its input Observables.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/zip"
+                        target="_blank">https://rxjs.dev/api/index/function/zip</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer4"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                race
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Returns an observable that mirrors the first source observable to emit an item.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/race"
+                        target="_blank">https://rxjs.dev/api/index/function/race</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer5"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                concat
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Creates an output Observable which sequentially emits all values from the first
+                        given Observable and then moves on to the next.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/concat"
+                        target="_blank">https://rxjs.dev/api/index/function/concat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer7"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                merge
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Creates an output Observable which concurrently emits all values from every given
+                        input Observable.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/merge"
+                        target="_blank">https://rxjs.dev/api/index/function/merge</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer8"></ul>
+        </div>
+    </div>
+</div>
+
+<div class="mb-3">
+    <h6 class="mb-3">Transforming observables</h6>
+    <p class="mb-0">Using these operators we can get data and perform required operation on data.</p>
+    <a href="https://rxjs.dev/guide/operators#transformation-operators"
+        target="_blank">https://rxjs.dev/guide/operators#transformation-operators</a>
+</div>
+
+
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                expand
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Recursively projects each source value to an Observable which is merged in the
+                        output Observable.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/expand"
+                        target="_blank">https://rxjs.dev/api/index/function/expand</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer9"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                groupBy
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Group into observables based on provided value.
+                    </p>
+                    <a href="https://www.learnrxjs.io/learn-rxjs/operators/transformation/groupby"
+                        target="_blank">https://www.learnrxjs.io/learn-rxjs/operators/transformation/groupby</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer10"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                partition
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Splits the source Observable into two, one with values that satisfy a predicate, and
+                        another with values that don't satisfy the predicate.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/partition"
+                        target="_blank">https://rxjs.dev/api/index/function/partition</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer6"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                pairwise
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Groups pairs of consecutive emissions together and emits them as an array of two
+                        values.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/pairwise"
+                        target="_blank">https://rxjs.dev/api/index/function/pairwise</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer11"></ul>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                scan
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Useful for encapsulating and managing state. Applies an accumulator (or "reducer
+                        function") to each value from the source after an initial state is established -- either via a
+                        seed value (second argument), or from the first value from the source.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/scan"
+                        target="_blank">https://rxjs.dev/api/index/function/scan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer12"></ul>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                pluck
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Select property to emit.
+                    </p>
+                    <a href="https://www.learnrxjs.io/learn-rxjs/operators/transformation/pluck"
+                        target="_blank">https://www.learnrxjs.io/learn-rxjs/operators/transformation/pluck</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <ul id="elContainer13"></ul>
+        </div>
+    </div>
+</div>

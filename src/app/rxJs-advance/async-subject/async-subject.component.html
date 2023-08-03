@@ -1,0 +1,24 @@
+<div class="mb-3">
+    <h6 class="mb-3">Async Subject</h6>
+    <p class="mb-0">A variant of Subject that only emits a value when it completes. It will emit its latest value to all
+        its observers on completion.</p>
+    <a href="https://www.tektutorialshub.com/angular/replaysubject-behaviorsubject-asyncsubject-in-angular/"
+        target="_blank">https://www.tektutorialshub.com/angular/replaysubject-behaviorsubject-asyncsubject-in-angular/</a>
+</div>
+
+<div class="row mb-3 g-2">
+    <div class="col-4">
+        <h6>Example</h6>
+        <h6>Add Video</h6>
+        <input type="text" class="form-control mb-3" #addVideo>
+        <button class="btn btn-primary btn-sm me-2" (click)="addNewVideo(addVideo)">Add</button>
+        <button class="btn btn-primary btn-sm" (click)="complete()">Complete</button>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-4">
+        <hr>
+        <ul id="elContainer">
+        </ul>
+    </div>
+</div>

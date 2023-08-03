@@ -1,0 +1,89 @@
+{
+    "firstname": {
+        "type": "text",
+        "value": "",
+        "label": "FirstName",
+        "rules": {
+            "required": true,
+            "minlength": 3,
+            "maxlength": 10
+        }
+    },
+    "lastname": {
+        "type": "text",
+        "value": "",
+        "label": "LastName",
+        "rules": {
+            "required": true
+        }
+    },
+    "email": {
+        "type": "email",
+        "value": "",
+        "label": "Email",
+        "rules": {
+            "required": true,
+            "email": true
+        }
+    },
+    "mobile": {
+        "type": "number",
+        "value": "",
+        "label": "Mobile",
+        "rules": {
+            "required": true
+        }
+    },
+    "gender": {
+        "label": "Gender",
+        "value": "1",
+        "type": "radio",
+        "options": [
+            {
+                "label": "Male",
+                "value": "1"
+            },
+            {
+                "label": "Female",
+                "value": "2"
+            }
+        ]
+    },
+    "address": {
+        "type": "textarea",
+        "value": "",
+        "label": "Address"
+    },
+    "termsConditions": {
+        "label": "Terms & Conditions",
+        "value": "",
+        "type": "checkbox",
+        "rules": {
+            "required": true
+        }
+    },
+    "country": {
+        "label": "Country",
+        "value": "0",
+        "type": "select",
+        "options": [
+            {
+                "label": "Select Country",
+                "value": "0"
+            },
+            {
+                "label": "India",
+                "value": "1"
+            },
+            {
+                "label": "US",
+                "value": "2"
+            }
+        ]
+    },
+    "resume": {
+        "type": "file",
+        "value": "",
+        "label": "Resume"
+    }
+}

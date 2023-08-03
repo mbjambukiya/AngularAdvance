@@ -1,0 +1,18 @@
+<div class="text-danger mb-3"
+    *ngIf="formName.controls[fieldName].invalid && (formName.controls[fieldName].dirty || formName.controls[fieldName].touched)">
+    <span *ngIf="formName.controls[fieldName].errors.required">
+        {{fieldName}} is required.
+    </span>
+    <span *ngIf="formName.controls[fieldName].errors.minlength">
+        {{fieldName}} should contain atleast {{formName.controls[fieldName].errors.minlength.requiredLength}} characters
+    </span>
+    <span *ngIf="formName.controls[fieldName].errors.maxlength">
+        {{fieldName}} should contain atmost {{formName.controls[fieldName].errors.maxlength.requiredLength}} characters
+    </span>
+    <span *ngIf="formName.controls[fieldName].errors.pattern">
+        {{fieldName}} is invalid
+    </span>
+    <span *ngIf="formName.controls[fieldName].errors.email">
+        {{fieldName}} is invalid
+    </span>
+</div>

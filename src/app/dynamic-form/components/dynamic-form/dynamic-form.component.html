@@ -1,0 +1,27 @@
+<div class="m-3">
+    <h4 class="mb-3">Dynamic Form</h4>
+    <h5 class="mb-3">Referrence</h5>
+    <p>
+        <a href="https://www.danywalls.com/creating-dynamic-forms-in-angular-a-step-by-step-guide"
+            target="_blank">https://www.danywalls.com/creating-dynamic-forms-in-angular-a-step-by-step-guide</a>
+    </p>
+    <p>
+        <a href="https://angular.io/guide/dynamic-form" target="_blank">https://angular.io/guide/dynamic-form</a>
+    </p>
+    <h5 class="mb-3">Example</h5>
+    <div class="container w-50 p-3" *ngIf="fields.length>0;else noFormData">
+
+        <h5 class="mb-3">User Registration</h5>
+        <form [formGroup]="dynamicFormGroup" (ngSubmit)="submitForm()">
+            <div *ngFor="let field of fields">
+                <app-dynamic-field [field]="field"></app-dynamic-field>
+                <app-dynamic-error [fieldName]="field.fieldName"></app-dynamic-error>
+            </div>
+            <button type="submit" [disabled]="!dynamicFormGroup.valid" class="btn btn-primary btn-sm">Submit</button>
+        </form>
+    </div>
+
+    <ng-template #noFormData>
+        <h5>No form data</h5>
+    </ng-template>
+</div>

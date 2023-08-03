@@ -1,0 +1,42 @@
+<div class="mb-3">
+    <h6 class="mb-3">Replay Subject</h6>
+    <p class="mb-0">A variant of subject that "replays" old values to new subscribers by emitting them when they first
+        subscribe.</p>
+    <a href="https://www.tektutorialshub.com/angular/replaysubject-behaviorsubject-asyncsubject-in-angular/"
+        target="_blank">https://www.tektutorialshub.com/angular/replaysubject-behaviorsubject-asyncsubject-in-angular/</a>
+</div>
+
+<div class="row mb-3 g-2">
+    <div class="col-4">
+        <h6>Example</h6>
+        <h6>Add Video</h6>
+        <input type="text" class="form-control mb-3" #addVideo>
+        <button class="btn btn-primary btn-sm" (click)="addNewVideo(addVideo)">Add</button>
+    </div>
+</div>
+
+<hr>
+<div class="row mb-3">
+    <div class="col-4">
+        <h6>User - 1</h6>
+        <hr>
+        <ul id="elContainer">
+            <li>Video 1</li>
+            <li>Video 2</li>
+        </ul>
+    </div>
+    <div class="col-4">
+        <h6>User - 2</h6>
+        <hr>
+        <ul id="elContainer2"></ul>
+        <button class="btn btn-sm" [ngClass]="!user2subMode?'btn-danger':'btn-secondary'"
+            (click)="user2Subscribe()">{{!user2subMode?'Subscribe':'Unsubscribe'}}</button>
+    </div>
+    <div class="col-4">
+        <h6>User - 3</h6>
+        <hr>
+        <ul id="elContainer3"></ul>
+        <button class="btn btn-sm" [ngClass]="!user3subMode?'btn-danger':'btn-secondary'"
+            (click)="user3Subscribe()">{{!user3subMode?'Subscribe':'Unsubscribe'}}</button>
+    </div>
+</div>

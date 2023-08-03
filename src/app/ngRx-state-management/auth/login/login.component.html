@@ -1,0 +1,44 @@
+<div class="m-3">
+    <div class="mb-3">
+        <h6 class="mb-3">NgRx Effects</h6>
+        <p class="mb-0">Effects are an RxJS powered side effect model for store. Effects use streams to provide new
+            sources of actions to reduce state based on external interactions such as network requests, web socket
+            messages and time-based events.</p>
+        <a href="https://ngrx.io/guide/effects" target="_blank">https://ngrx.io/guide/effects</a>
+    </div>
+
+    <h5>Example</h5>
+
+    <div class="container w-50 p-3">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <label for="" class="form-label">Email</label>
+                <input class="form-control" type="text" placeholder="test@gmail.com" formControlName="Email">
+                <div
+                    *ngIf="loginForm.get('Email').errors && (loginForm.get('Email').touched || loginForm.get('Email').dirty)">
+                    <div *ngIf="loginForm.get('Email').errors.required">
+                        <span class="text-danger">Email is required</span>
+                    </div>
+                    <div *ngIf="loginForm.get('Email').errors.email">
+                        <span class="text-danger">Email is invalid</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="" class="form-label">Password</label>
+                <input class="form-control" type="password" placeholder="Test@123" formControlName="Password">
+                <div
+                    *ngIf="loginForm.get('Password').errors && (loginForm.get('Password').touched || loginForm.get('Password').dirty)">
+                    <div *ngIf="loginForm.get('Password').errors.required">
+                        <span class="text-danger">Password is required</span>
+                    </div>
+                    <div *ngIf="loginForm.get('Password').errors.pattren">
+                        <span class="text-danger">Password is invalid</span>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm mt-3" [disabled]="!loginForm.valid">Login</button>
+        </form>
+    </div>
+</div>

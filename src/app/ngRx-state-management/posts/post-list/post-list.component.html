@@ -1,0 +1,76 @@
+<div class="m-3">
+    <h4 class="mb-3">NgRx State Management</h4>
+    <div class="mb-3">
+        <h6 class="mb-3">Store</h6>
+        <p class="mb-0">RxJS powered global state management for Angular apps, inspired by Redux. Store is a controlled
+            state container
+            designed to help write performant, consistent applications on top of Angular.</p>
+        <a href="https://ngrx.io/guide/store" target="_blank">https://ngrx.io/guide/store</a>
+    </div>
+    <div class="mb-3">
+        <h6 class="mb-3">Action</h6>
+        <p class="mb-0">Actions express unique events that happen throughout your application. From user interaction
+            with the page, external interaction through network requests, and direct interaction with device APIs, these
+            and more events are described with actions.</p>
+        <a href="https://ngrx.io/guide/store/actions" target="_blank">https://ngrx.io/guide/store/actions</a>
+    </div>
+    <div class="mb-3">
+        <h6 class="mb-3">Reducer</h6>
+        <p class="mb-0">Reducers in NgRx are responsible for handling transitions from one state to the next state in
+            your application. Reducer functions handle these transitions by determining which actions to handle based on
+            the action's type.</p>
+        <a href="https://ngrx.io/guide/store/reducers" target="_blank">https://ngrx.io/guide/store/reducers</a>
+    </div>
+    <div class="mb-3">
+        <h6 class="mb-3">Selector</h6>
+        <p class="mb-0">Selectors are pure functions used for obtaining slices of store state.</p>
+        <a href="https://ngrx.io/guide/store/selectors" target="_blank">https://ngrx.io/guide/store/selectors</a>
+    </div>
+    <div class="mb-3">
+        <h6 class="mb-3">NgRx DevTools</h6>
+        <p class="mb-0">Store Devtools provides developer tools and instrumentation for store.</p>
+        <a href="https://ngrx.io/guide/store-devtools" target="_blank">https://ngrx.io/guide/store-devtools</a>
+    </div>
+
+
+    <h5>Example</h5>
+
+    <div class="container p-3">
+        <div class="row">
+            <h5>Posts</h5>
+            <div class="col-4">
+                <button class="btn btn-primary btn-sm m-1" routerLink="add">Add New Post</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let post of posts$|async">
+                            <td>{{post.id}}</td>
+                            <td>{{post.title}}</td>
+                            <td>{{post.description}}</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm m-1"
+                                    [routerLink]="['edit',post.id]">Update</button>
+                                <button class="btn btn-danger btn-sm m-1" (click)="deletePost(post.id)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

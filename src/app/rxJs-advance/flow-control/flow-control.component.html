@@ -1,0 +1,205 @@
+<div class="mb-3">
+    <h6 class="mb-3">Backpressure and Flowcontrol</h6>
+    <p class="mb-0">When it comes to streaming data, streams can be overly chatty in which the consumer cannot keep up
+        with the producer. To that end, we need mechanisms to control the source so that the consumer does not get
+        overwhelmed. These mechanisms can come in either the form of lossy or loss-less operations, each of which
+        depends on the requirements. For example, if you miss a few mouse movements, it may not be a problem, however,
+        if you miss a few bank transactions, that could definitely be a problem.</p>
+    <a href="https://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/creating_and_querying_observable_sequences/backpressure.html"
+        target="_blank">https://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/creating_and_querying_observable_sequences/backpressure.html</a>
+</div>
+
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                DebounceTime
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Emits a notification from the source Observable only after a particular time span
+                        has passed without another source emission.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/debounceTime"
+                        target="_blank">https://rxjs.dev/api/index/function/debounceTime</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <input type="text" class="form-control" #inp1>
+                <br>
+                <p>Search : {{search1}}</p>
+                <ul id="elContainer"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                SampleTime
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Emits the most recently emitted value from the source Observable within periodic
+                        time intervals.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/sampleTime"
+                        target="_blank">https://rxjs.dev/api/index/function/sampleTime</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <p>0,1,2,....,14 (sampletime - 2000)</p>
+                <ul id="elContainer2"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                Pausable Approach
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">pause emission for some time duration and resume after some time and vice versa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer3"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                Buffer
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Buffers the source Observable values until closingNotifier emits.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/buffer"
+                        target="_blank">https://rxjs.dev/api/index/function/buffer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer4"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                BufferCount
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Buffers the source Observable values until the size hits the maximum bufferSize
+                        given.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/bufferCount"
+                        target="_blank">https://rxjs.dev/api/index/function/bufferCount</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer5"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                BufferTime
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Buffers the source Observable values for a specific time period.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/bufferTime"
+                        target="_blank">https://rxjs.dev/api/index/function/bufferTime</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer6"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3 g-2">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                WindowTime
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <p class="mb-0">Branch out the source Observable values as a nested Observable periodically in time.
+                    </p>
+                    <a href="https://rxjs.dev/api/index/function/windowTime"
+                        target="_blank">https://rxjs.dev/api/index/function/windowTime</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                Example
+            </div>
+            <div class="card-body">
+                <ul id="elContainer7"></ul>
+            </div>
+        </div>
+    </div>
+</div>

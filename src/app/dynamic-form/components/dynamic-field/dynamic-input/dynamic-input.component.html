@@ -1,0 +1,6 @@
+<form [formGroup]="formName">
+    <div class="form-group mb-3">
+        <label class="form-label">{{field.label}}</label>
+        <input class="form-control" [type]="field.type" [formControlName]="field.fieldName" />
+    </div>
+</form>
